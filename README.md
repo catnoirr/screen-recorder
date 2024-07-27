@@ -1,1 +1,1 @@
-# screen-recorder
+This only work on pc
