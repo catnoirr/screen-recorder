@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Recorder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* Modal styles */
+        .modal {
+            display: none; /* Ensure the modal is hidden initially */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 300px;
+            height: 150px;
+            box-sizing: border-box;
+            text-align: center;
+            position: relative;
+            border-radius: 1rem;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .close {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        #modalText p {
+            margin: 10px 0; /* Add spacing between lines */
+            font-size: 15px;
+        }
+        #modalText h4{
+            margin: 0;
+            color: #4CAF50;
+        }
+        #modalText .alert{
+            color: red;
+        }
+        span{
+            color: #aaa;
+            
+        }
+        .instagram{
+            color:#aaa;
+            font-size: 15px;
+                        transition: color 0.3s;
+
+        }
+        .engrave:hover .bx-instagram-alt {
+            color: #E1306C;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Screen Recorder</h1>
+        <div class="align">
+            <button id="startBtn"><i class='bx bx-video-recording start'></i> Start</button>
+            <button id="stopBtn" disabled><i class='bx bx-stop-circle stop'></i> Stop</button>
+            <button id="downloadBtn" disabled><i class='bx bxs-download download'></i> Download</button>
+        </div>
+        <video id="recordedVideo" controls></video>
+        <div id="timer">00:00:00</div><br>
+        <div class="engrave"><i class='bx bxl-instagram-alt instagram' ></i><a href="https://www.instagram.com/offxsagr/"><span >@offxsagr</span></a>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="timeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalText"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
